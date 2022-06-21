@@ -1,6 +1,4 @@
 from distutils.core import setup
-
-import setuptools
 from pip._internal.req import parse_requirements
 
 requirements = [
@@ -10,14 +8,19 @@ requirements = [
 
 setup(
     name='blip-vit',
-    packages=['blip', 'blip.models'],
-    version='0.0.2',  # Ideally should be same as your GitHub release tag varsion
+    packages=['blip', 'blip.models', 'blip.configs'],
+    version='0.0.3',  # Ideally should be same as your GitHub release tag varsion
     description='BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation',
     author='salesforce',
     author_email='junnan.li@salesforce.com',
     url='https://github.com/fernandoTB/BLIP',
-    download_url='https://github.com/fernandoTB/BLIP/archive/refs/tags/0.0.1.tar.gz',
-    keywords=['0.0.1'],
+    download_url='https://github.com/fernandoTB/BLIP/archive/refs/tags/0.0.3.tar.gz',
+    keywords=['0.0.3'],
     install_requires=requirements,
     classifiers=[],
+    package_data={'': [
+        '*.txt',
+        '*.yaml',
+        '*.json'
+    ]}
 )
